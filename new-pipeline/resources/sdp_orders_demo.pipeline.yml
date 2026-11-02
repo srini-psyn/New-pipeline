@@ -1,0 +1,16 @@
+resources:
+  pipelines:
+    sdp_orders_demo:
+      name: sdp_orders_demo
+      configuration:
+        "source": "/Volumes/workspace/default/sdp_demo"
+      libraries:
+        - glob:
+            include: ../src/sdp_orders_demo/transformations/**
+      catalog: workspace
+      channel: CURRENT
+      continuous: false
+      photon: true
+      root_path: ../src/sdp_orders_demo
+      schema: default
+      serverless: true
